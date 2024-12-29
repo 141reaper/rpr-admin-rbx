@@ -52,17 +52,6 @@ local function showNotification(message, backgroundColor)
     messageLabel.Text = message
     messageLabel.TextSize = 36
     messageLabel.Parent = frame
-    
-    repeat
-        wait(1)
-        isWhitelisted = false
-        for _, whitelistedUser in ipairs(whitelistedPlayers) do
-            if (playerName:lower() == whitelistedUser:lower()) then
-                isWhitelisted = true
-                break
-            end
-        end
-    gui:Destroy()
 end
 -- Connect chat command handler
 local id = game.Players.LocalPlayer.UserId
